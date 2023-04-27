@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yellow_duck_table/static/css/main.7acaea2f.css",
+    "main.js": "/yellow_duck_table/static/js/main.14bb880d.js",
+    "index.html": "/yellow_duck_table/index.html",
+    "main.7acaea2f.css.map": "/yellow_duck_table/static/css/main.7acaea2f.css.map",
+    "main.14bb880d.js.map": "/yellow_duck_table/static/js/main.14bb880d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.14bb880d.js"
+  ]
+}
