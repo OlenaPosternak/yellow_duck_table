@@ -156,7 +156,7 @@ export const App = () => {
                   <td>
                     <button
                       onClick={() => (
-                        setShowEditForm(true), setEditUserID(row.id)
+                        setShowEditForm(true) & setEditUserID(row.id)
                       )}
                     >
                       Edit
