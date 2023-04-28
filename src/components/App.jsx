@@ -2,6 +2,16 @@ import { useState } from 'react';
 import { AddUserForm } from './AddUser';
 import { EditUserDataForm } from './EditUser';
 
+import {
+  Tr,
+  Table,
+  ThWrapper,
+  Btn,
+  Cell,
+  CellWrapper,
+  BtnWrapper,
+} from './App.styles';
+
 export const App = () => {
   // State of users, example:
   const [data, setData] = useState([
@@ -103,75 +113,86 @@ export const App = () => {
   return (
     <>
       <div>
-        <table>
+        <Table>
           <thead>
-            <tr>
+            <Tr>
               <th>
-                ID
-                <button onClick={() => sortByIdOrAge('ascId')}>Sort asc</button>
-                <button onClick={() => sortByIdOrAge('descId')}>
-                  Sort desc
-                </button>
+                <ThWrapper>
+                  ID
+                  <Btn onClick={() => sortByIdOrAge('ascId')}>Sort asc</Btn>
+                  <Btn onClick={() => sortByIdOrAge('descId')}>Sort desc</Btn>
+                </ThWrapper>
               </th>
               <th>
-                Name
-                <button onClick={() => sortNameOrEmail('ascName')}>
-                  Sort asc
-                </button>
-                <button onClick={() => sortNameOrEmail('descName')}>
-                  Sort desc
-                </button>
+                <ThWrapper>
+                  Name
+                  <Btn onClick={() => sortNameOrEmail('ascName')}>Sort asc</Btn>
+                  <Btn onClick={() => sortNameOrEmail('descName')}>
+                    Sort desc
+                  </Btn>
+                </ThWrapper>
               </th>
               <th>
-                Email
-                <button onClick={() => sortNameOrEmail('ascEmail')}>
-                  Sort asc
-                </button>
-                <button onClick={() => sortNameOrEmail('descEmail')}>
-                  Sort desc
-                </button>
+                <ThWrapper>
+                  Email
+                  <Btn onClick={() => sortNameOrEmail('ascEmail')}>
+                    Sort asc
+                  </Btn>
+                  <Btn onClick={() => sortNameOrEmail('descEmail')}>
+                    Sort desc
+                  </Btn>
+                </ThWrapper>
               </th>
               <th>
-                Age
-                <button onClick={() => sortByIdOrAge('ascAge')}>
-                  Sort asc
-                </button>
-                <button onClick={() => sortByIdOrAge('descAge')}>
-                  Sort desc
-                </button>
+                <ThWrapper>
+                  Age
+                  <Btn onClick={() => sortByIdOrAge('ascAge')}>Sort asc</Btn>
+                  <Btn onClick={() => sortByIdOrAge('descAge')}>Sort desc</Btn>
+                </ThWrapper>
               </th>
-            </tr>
+            </Tr>
           </thead>
           <tbody>
             {data.map(row => (
-              <>
-                <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td>{row.name}</td>
-                  <td>{row.email}</td>
-                  <td>{row.age}</td>
-                  <td>
-                    <button onClick={() => deleteUser(row.id)}>Delete</button>
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => (
-                        setShowEditForm(true) & setEditUserID(row.id)
-                      )}
-                    >
-                      Edit
-                    </button>
-                  </td>
-                </tr>
+              <CellWrapper>
                 {showEditForm && editUserID === row.id ? (
                   <EditUserDataForm editUserInfo={editUserInfo} row={row} />
                 ) : (
                   <></>
                 )}
-              </>
+                <tr key={row.id}>
+                  <Cell>
+                    <td>{row.id}</td>
+                  </Cell>
+                  <Cell>
+                    <td>{row.name}</td>
+                  </Cell>
+                  <Cell>
+                    <td>{row.email}</td>
+                  </Cell>
+                  <Cell>
+                    <td>{row.age}</td>
+                  </Cell>
+                </tr>
+
+                <BtnWrapper>
+                  <div>
+                    <Btn onClick={() => deleteUser(row.id)}>Delete</Btn>
+                  </div>
+                  <div>
+                    <Btn
+                      onClick={() =>
+                        setShowEditForm(true) & setEditUserID(row.id)
+                      }
+                    >
+                      Edit
+                    </Btn>
+                  </div>
+                </BtnWrapper>
+              </CellWrapper>
             ))}
           </tbody>
-        </table>
+        </Table>
       </div>
 
       <AddUserForm user={user} handleSubmit={handleSubmit} />
