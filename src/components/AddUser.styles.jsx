@@ -3,6 +3,7 @@ import { Field, Form } from 'formik';
 
 export const FormStyle = styled(Form)`
   margin-top: 20px;
+  margin-left: 20px;
   display: flex;
   gap: 10px;
   align-items: center;
