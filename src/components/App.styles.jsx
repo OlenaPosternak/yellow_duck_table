@@ -1,5 +1,13 @@
 import styled from '@emotion/styled';
 
+export const Table = styled.table`
+margin-top: 20px;
+margin-left: 20px;
+  table-layout: fixed;
+  width: 1004px;
+  border-collapse: collapse;
+  border: 2px solid green;
+`;
 export const Tr = styled.tr`
   border: 1px solid green;
 
@@ -15,12 +23,6 @@ export const ThWrapper = styled.div`
   border-right: 1px solid green;
 `;
 
-export const Table = styled.table`
-  table-layout: fixed;
-  width: 1004px;
-  border-collapse: collapse;
-  border: 2px solid green;
-`;
 
 export const Btn = styled.button`
   background: #60be60;
