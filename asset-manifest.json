@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/yellow_duck_table/static/css/main.7acaea2f.css",
-    "main.js": "/yellow_duck_table/static/js/main.ec7572c6.js",
+    "main.js": "/yellow_duck_table/static/js/main.28efaf75.js",
     "index.html": "/yellow_duck_table/index.html",
     "main.7acaea2f.css.map": "/yellow_duck_table/static/css/main.7acaea2f.css.map",
-    "main.ec7572c6.js.map": "/yellow_duck_table/static/js/main.ec7572c6.js.map"
+    "main.28efaf75.js.map": "/yellow_duck_table/static/js/main.28efaf75.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.ec7572c6.js"
+    "static/js/main.28efaf75.js"
   ]
 }
